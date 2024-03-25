@@ -48,7 +48,7 @@ class Person {
 
 
   sellsCar = car => this.cars = this.cars.filter(i => i !== car) && car.removeOwner(this);
-  
+
 
   getAllCarsInfo = () => `${this.name} owns these cars: ${this.cars.map(car => car.getCarInfo()).join(', ')}.`;
 
