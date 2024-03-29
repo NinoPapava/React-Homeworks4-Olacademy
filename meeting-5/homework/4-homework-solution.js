@@ -25,7 +25,7 @@ function loginUser(email, password) {
 function getUserVideos(email) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (usersDB.hasOwnProperty(email) && usersDB[email].length > 0) {
+      if (usersDB.hasOwnProperty(email)) {
         resolve(usersDB[email]);
       } else {
         reject("Videos not found!");

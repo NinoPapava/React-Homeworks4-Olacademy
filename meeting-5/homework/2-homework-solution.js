@@ -33,7 +33,7 @@ function loginUser(email, password, onSuccess, onError) {
 }
 
 function getUserVideos(email, onSuccess, onError) {
-  if (usersDB.hasOwnProperty(email) && usersDB[email].length > 0) {
+  if (usersDB.hasOwnProperty(email)) {
     setTimeout(() => {
       onSuccess(usersDB[email]);
     }, 2000);
@@ -84,7 +84,7 @@ const getPassedUsersFirstVideoTitle = (user) => {
   );
 }
 
-getPassedUsersFirstVideoTitle("user3@hw.js");
+getPassedUsersFirstVideoTitle("user1@hw.js");
 
 
 
