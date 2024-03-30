@@ -8,6 +8,10 @@ const usersDB = {
 
 // Homework-3 (Using Promises)
 
+function displayError(errorMessage) {
+  console.error(new Error(errorMessage));
+}
+
 function loginUser(email, password) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -60,11 +64,11 @@ function getPassedUsersFirstVideoTitle(user) {
       console.log("title:", title);
     })
     .catch((error) => {
-      console.error("Error:", error);
+      displayError(error);
     });
 }
 
-getPassedUsersFirstVideoTitle("user1@hw.js");
+getPassedUsersFirstVideoTitle("user3@hw.js");
 
 
 
