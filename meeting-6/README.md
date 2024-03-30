@@ -1,34 +1,8 @@
-function logIt() {
-return new Promise((resolve, reject) => {
-resolve();
-});
-}
-function logIt2() {
-return new Promise((resolve, reject) => {
-setTimeout(() => {
-resolve();
-}, 0);
-});
-}
-
-setTimeout(() => console.log("1"), 0);
-
-Promise.resolve().then(() => console.log("2"));
-
-console.log("3");
-
-logIt2().then(() => console.log("4"));
-logIt().then(() => console.log("5"));
-
-console.log("6");
-
----
-
 I STEP. ALL in STACK
 
 setTimeout --> STACK | (1)
 Promise --> STACK | (2)  
-console.log("3") --> STACK | (3)  
+console.log("3") --> STACK | (3)
 logIt2().then(()) --> STACK | (4)  
 logIt().then(()) --> STACK | (5)  
 console.log("6") --> STACK | (6)
