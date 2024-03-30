@@ -1,38 +1,43 @@
 I STEP. ALL in STACK
 
  setTimeout --> STACK | (1)  <br>
- Promise --> STACK | (2)  
- console.log("3") --> STACK | (3)
- logIt2().then(()) --> STACK | (4)  
- logIt().then(()) --> STACK | (5)  
+ Promise --> STACK | (2)  <br>
+ console.log("3") --> STACK | (3)   <br>
+ logIt2().then(()) --> STACK | (4)  <br>
+ logIt().then(()) --> STACK | (5)  <br>
  console.log("6") --> STACK | (6)
 
 ---
 
 II STEP.
 
-console.log("3") from STACK --> first result (3)
-console.log("6") from STACK --> second result (6)
+console.log("3") from STACK --> first result (3)  <br>
+console.log("6") from STACK --> second result (6)  <br>
+<br>
 
-setTimeout (1) from STACK --> API --> MAKRO reason (setTimeout)
-Promise (2) from STACK --> API --> MIKRO reason (Promise)
-logIt2().then(()) (4) from STACK --> API --> MAKRO reason (setTimeout)
-logIt().then(()) (5) from STACK --> API --> MIKRO reason (Promise)
+setTimeout (1) from STACK --> API --> MAKRO reason (setTimeout)  <br>
+Promise (2) from STACK --> API --> MIKRO reason (Promise)  <br>
+logIt2().then(()) (4) from STACK --> API --> MAKRO reason (setTimeout)  <br>
+logIt().then(()) (5) from STACK --> API --> MIKRO reason (Promise)  <br>
 
 ---
 
-III STEP. Result
+III STEP. Result  <br>
 
 I. Sync. func.
-console.log("3") --> 3
-console.log("6") --> 6
+console.log("3") --> 3  <br>
+console.log("6") --> 6  <br>
 
-II. MIKRO
-Promise (2) --> 2
-logIt().then(()) (5) --> 5
+II. MIKRO   <br>
+Promise (2) --> 2  <br>
+logIt().then(()) (5) --> 5  <br>
 
-III. MAKRO
-setTimeout (1) --> 1
-logIt2().then(()) (4) --> 4
+III. MAKRO  <br>
+setTimeout (1) --> 1  <br>
+logIt2().then(()) (4) --> 4  <br>
+
+
+Result: 3, 6, 2, 5, 1, 4
+
 
 Result: 3, 6, 2, 5, 1, 4
