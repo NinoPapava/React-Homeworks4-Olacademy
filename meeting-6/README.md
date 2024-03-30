@@ -1,11 +1,11 @@
 I STEP. ALL in STACK
 
-I. setTimeout --> STACK | (1)
-II. Promise --> STACK | (2)  
-III. console.log("3") --> STACK | (3)
-IV. logIt2().then(()) --> STACK | (4)  
-V. logIt().then(()) --> STACK | (5)  
-VI. console.log("6") --> STACK | (6)
+ setTimeout --> STACK | (1)  <br>
+ Promise --> STACK | (2)  
+ console.log("3") --> STACK | (3)
+ logIt2().then(()) --> STACK | (4)  
+ logIt().then(()) --> STACK | (5)  
+ console.log("6") --> STACK | (6)
 
 ---
 
