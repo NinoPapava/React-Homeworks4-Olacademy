@@ -17,7 +17,7 @@ console.log("6")--------> second result (6)  <br>
 
 setTimeout (1)---------->API--> MAKRO reason (setTimeout)  <br>
 Promise (2)------------->API--> MIKRO reason (Promise)  <br>
-logIt2().then(()) (4)--->API--> MAKRO reason (setTimeout)  <br>
+logIt2().then(()) (4)--->API--> MIKRO reason (Promise(setTimeout))---->STACK--->API--->MAKRO  <br>
 logIt().then(()) (5)---->API--> MIKRO reason (Promise)  <br>
 
 ---
