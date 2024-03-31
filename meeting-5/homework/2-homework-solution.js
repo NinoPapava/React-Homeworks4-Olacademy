@@ -69,17 +69,17 @@ const getPassedUsersFirstVideoTitle = (user) => {
         console.log("title:", title);
       },
         (error) => {
-          console.error("Error getting video details:", error);
+          displayError(error);
         }
       );
     },
       (error) => {
-        console.error("Error getting user videos:", error);
+        displayError(error);
       }
     );
   },
     (error) => {
-      console.error("Error logging in:", error);
+      displayError(error);
     }
   );
 }

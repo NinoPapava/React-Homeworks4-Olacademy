@@ -66,7 +66,7 @@ async function getPassedUsersFirstVideoTitle(user) {
   }
 }
 
-getPassedUsersFirstVideoTitle("user4@hw.js");
+getPassedUsersFirstVideoTitle("user3@hw.js");
 
 
 

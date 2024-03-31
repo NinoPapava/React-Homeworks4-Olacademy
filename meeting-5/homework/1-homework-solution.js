@@ -31,7 +31,7 @@ function videoDetails(video, callback) {
 
 const getPassedUsersFirstVideoTitle = (user) => {
 
-  loginUser("user1@hw.js", "1234", (result) => {
+  loginUser(user, "1234", (result) => {
     console.log("user:", result);
 
     getUserVideos(result.userEmail, (videos) => {
@@ -45,7 +45,7 @@ const getPassedUsersFirstVideoTitle = (user) => {
   })
 }
 
-getPassedUsersFirstVideoTitle();
+getPassedUsersFirstVideoTitle("user1@hw.js");
 
 
 
